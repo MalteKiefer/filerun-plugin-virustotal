@@ -9,6 +9,11 @@ With this extension you have the possibility to check files for a virus at Virus
 > **Important:** the directory must have the name `virustotal`, otherwise you will get an error.
 4. Go to the plugins setting and add your VirusTotal API key
 
+## Update
+1. Change to the filerun directory
+2. Run the following command `cd customizables/plugins/virustotal`
+3. Run the following command `git pull`
+4. Now you have the latest version
 
 ## Screenshots
 ![Screen1](screenshots/screen1.png)
