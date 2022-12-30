@@ -18,7 +18,7 @@ class custom_virustotal extends \FileRun\Files\Plugin
         ];
         $this->JSconfig = [
             'title' => self::t("Scan for Virus"),
-            'icon' => 'customizables/plugins/virustotal/icon.png',
+            'icon' => 'customizables/plugins/virustotal/icons/icon.png',
             'popup' => true,
             'width' => 800, 'height' => 450,
             'requires' => ['preview']
@@ -41,14 +41,14 @@ class custom_virustotal extends \FileRun\Files\Plugin
             $vt_json = file_get_contents("https://www.virustotal.com/vtapi/v2/file/report?apikey=$vt_key&resource=$hash");
             $vt_json_result = json_decode($vt_json, true);
             if ($vt_json_result['response_code'] == 0) {
-                require_once('virustotal.class.php');
+                require_once('class/virustotal.class.php');
                 $vt = new virustotal(self::getSetting('APIKey'));
                 $vt->checkFile($this->data['fullPath']);
             }
             $this->logAction();
-            require $this->path . "/display.php";
+            require $this->path . "/display/display.php";
         } else {
-            require $this->path . "/display_error.php";
+            require $this->path . "/display/display_error.php";
             $this->logAction();
         }
     }
