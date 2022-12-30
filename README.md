@@ -10,3 +10,6 @@ With this extension you have the possibility to check files for a virus at Virus
 > **Important:** the directory must have the name `virustotal`, otherwise you will get an error.
 4. Go to the plugins setting and add your VirusTotal API key
 
+## Thanks
+- [IzzySoft](https://github.com/IzzySoft/virustotal) for the VirusTotal PHP Class
+
